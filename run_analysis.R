@@ -59,12 +59,12 @@ test_y <- read.table("test/y_test.txt")
 features <- read.table("features.txt")
 
 #replace labels with the real activities
-#4.Appropriately labels the data set with descriptive variable names.
+#3.Uses descriptive activity names to name the activities in the data set
 test_y_1 <- y_match(test_y)
 train_y_1 <- y_match(train_y)
 
 #use activities, subject, and features to generate dataframes which have all the data needed. 
-#3.Uses descriptive activity names to name the activities in the data set
+#4.Appropriately labels the data set with descriptive variable names.
 whole_test <- cbind(test_subject,test_y_1,test_x)
 whole_train <- cbind(train_subject,train_y_1,train_x)
 names(whole_test) <- c("subject","active",as.character(features$V2))
