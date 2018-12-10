@@ -90,3 +90,4 @@ for (i in 1:length(unique(selected_whole_data$subject))){
         }
 }
 
+colnames(answer) <- colnames(selected_whole_data)
