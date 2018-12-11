@@ -1,5 +1,7 @@
 # download the  Data file 
 filesPath <- "C:/Users/Alan/Desktop/Data Science/Getting and Cleaning Data"
+##you can use your path to change the filePath when you review the code
+
 setwd(filesPath)
 if(!file.exists("./task")){dir.create("./task")}
 fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
@@ -7,7 +9,9 @@ download.file(fileUrl,destfile="task.zip",method="curl")
 
 #Unzip DataSet to the directory
 unzip(zipfile="task.zip",exdir="./task")
+
 setwd("C:/Users/Alan/Desktop/Data Science/Getting and Cleaning Data/task/UCI HAR Dataset")
+##you can use your path to change the filePath when you review the code,the path should be "your_path/task/UCI HAR Dataset"
 
 
 library(stringr)
