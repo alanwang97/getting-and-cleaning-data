@@ -1,3 +1,15 @@
+# download the  Data file 
+filesPath <- "C:/Users/Alan/Desktop/Data Science/Getting and Cleaning Data"
+setwd(filesPath)
+if(!file.exists("./task")){dir.create("./task")}
+fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+download.file(fileUrl,destfile="task.zip",method="curl")
+
+#Unzip DataSet to the directory
+unzip(zipfile="task.zip",exdir="./task")
+setwd("C:/Users/Alan/Desktop/Data Science/Getting and Cleaning Data/task/UCI HAR Dataset")
+
+
 library(stringr)
 library(dplyr)
 
@@ -91,3 +103,5 @@ for (i in 1:length(unique(selected_whole_data$subject))){
 }
 
 colnames(answer) <- colnames(selected_whole_data)
+
+write.table(answer,"tidy data.txt",row.names = FALSE)
