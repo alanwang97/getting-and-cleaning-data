@@ -4,7 +4,7 @@ the script is used to process specific dataset.
 
 The script does not follow the instruction of the coursework strictly.
 
-First, the script reads all the raw datasets needed(you can find them in the code book) and the default working dictionary is "XXXX/UCI HAR Dataset".   (I have added some new codes to help you run the code, so you can run the script directly)
+First, the script reads all the raw datasets needed(you can find them in the code book) and the default working dictionary is "XXXX/UCI HAR Dataset".   (I have added some new codes to help you run the code, so you can run the script directly after replacing my path to your test path)
 
 Second, the script replaces the number in the "train_y.txt" and "test_y"  with the activities according to the "activity_labels.txt", which is the 3rd step of the instruction.
 
